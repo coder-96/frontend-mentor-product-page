@@ -1,0 +1,832 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Kumbh Sans", sans-serif;
+}
+
+@media (max-width: 375px) {
+    .attribution {
+        margin-top: 20px;
+        margin-bottom: 5px;
+        font-size: 11px;
+        text-align: center;
+        font-weight: 700;
+    }
+    .attribution a {
+        color: hsl(228, 45%, 44%);
+    }
+
+    /*----------------- Navbar container -------------------*/
+    .navbar {
+        overflow: hidden;
+        background-color: #ffffff;
+        font-family: Arial;
+        display: block;
+    }
+
+    /* Links inside the navbar */
+    .navbar .nav-item {
+        font-size: 24px;
+        font-weight: 700;
+        display: inline;
+        color: rgb(0, 0, 0);
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    .navbar p.nav-item {
+        width: 15px;
+        padding: 14px 100px 14px 0px;
+    }
+
+    .navbar img.nav-item {
+        width: 25px;
+        position: absolute;
+        right: 10px;
+        top: -5px;
+    }
+
+    /* The dropdown container */
+    .dropdown {
+        float: left;
+    }
+
+    /* Dropdown button */
+    .dropbtn {
+        font-size: 16px;
+        border: none;
+        outline: none;
+        color: white;
+        padding: 14px 5px 14px 5px;
+        background-color: inherit;
+        /* Important for vertical align on mobile phones */
+        font-family: inherit;
+        /* Important for vertical align on mobile phones */
+        margin: 0;
+        width: 60px;
+    }
+
+    /* Add a red background color to navbar links on hover */
+    .dropbtn:hover {
+        background-color: hsl(220, 14%, 75%);
+    }
+
+    /* Dropdown content (hidden by default) */
+    .dropdown-content {
+        font-family: "Kumbh Sans", sans-serif;
+        font-weight: 700;
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 220px;
+        height: 100vh;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+
+    /* Links inside the dropdown */
+    .dropdown-content a {
+        float: none;
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+    }
+
+    .close {
+        margin-left: 5px;
+        width: 15px;
+    }
+
+    .close:hover {
+        background-color: hsl(220, 14%, 75%) !important;
+    }
+
+    /* Add a grey background color to dropdown links on hover */
+    .dropdown-content a:hover {
+        background-color: #ddd;
+    }
+
+    .show-drop {
+        display: block;
+    }
+
+    /* ------ Cart dropdown container ------- */
+
+    .cart-drop {
+        display: none;
+        position: absolute;
+        z-index: 1;
+        background-color: #ffffff;
+        margin: 10px 5px;
+        width: 365px;
+        height: 270px;
+        border-radius: 10px;
+    }
+
+    .cart-drop > p {
+        margin-left: 10px;
+        font-weight: 700;
+    }
+
+    .cart-drop > hr {
+        border: 1px solid hsl(227, 13%, 86%);
+    }
+
+    .cartSvg:hover {
+        background-color: hsl(240, 12%, 91%);
+    }
+
+    .show-cart {
+        display: block;
+    }
+
+    .cart-items {
+        margin: 0px 10px;
+    }
+
+    .cart-items > * {
+        display: inline-block;
+    }
+
+    .cart-items p {
+        font-size: 14px;
+        margin-top: 0px;
+        padding: 0px 20px;
+    }
+
+    .cart-img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .cart-img > img {
+        border-radius: 10px;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        float: left;
+        margin-top: 40px;
+    }
+
+    .sec-p {
+        margin-left: 70px;
+    }
+
+    .cart-drop button {
+        display: block;
+        background-color: hsl(26, 100%, 55%);
+        margin: 20px 10px 0px;
+        width: 340px;
+        height: 50px;
+        border: 0;
+        border-radius: 5px;
+        color: hsl(0, 0%, 100%);
+        font-weight: 700;
+    }
+
+    .cart-drop button:hover {
+        background-color: hsl(220, 14%, 75%);
+    }
+
+    .del-from-cart {
+        margin-left: 100px;
+    }
+
+    .del-from-cart:hover {
+        opacity: 0.5;
+    }
+
+    .empty-cart {
+        font-weight: 700;
+        color: hsl(219, 9%, 45%);
+        margin: 80px !important;
+    }
+
+    .count {
+        width: 16px;
+        height: 12px;
+        border-radius: 5px;
+        text-align: center;
+        z-index: 1;
+        position: absolute;
+        top: 10px;
+        left: 280px;
+        font-size: 10px;
+        background-color: hsl(26, 100%, 55%);
+        color: #ffffff;
+    }
+
+    /*----------------- Carousel container -------------------*/
+
+    /* Slideshow container */
+    .slideshow-container {
+        width: auto;
+        position: relative;
+        margin: 0;
+    }
+
+    .mySlides {
+        width: 375px;
+        height: 300px;
+        display: none;
+    }
+
+    .mySlides > * {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .show {
+        display: block;
+    }
+
+    /* prev & nex btn */
+    .previous,
+    .next {
+        text-decoration: none;
+        display: inline-block;
+        padding: 8px 16px;
+        background-color: #f1f1f1;
+        color: black;
+    }
+
+    .previous:hover,
+    .next:hover {
+        color: hsl(26, 100%, 55%);
+        border: 2px solid hsl(26, 100%, 55%);
+    }
+
+    .previous {
+        position: absolute;
+        top: 140px;
+        left: 15px;
+    }
+
+    .next {
+        position: absolute;
+        top: 140px;
+        left: 320px;
+    }
+
+    .round {
+        border-radius: 50%;
+    }
+
+    .thumbnail-pics {
+        display: none;
+    }
+    /* ---------------- Main Part --------------------- */
+
+    .desc {
+        padding: 10px 20px 0px 20px;
+    }
+
+    .company-title {
+        color: hsl(26, 100%, 55%);
+        font-weight: 700;
+    }
+
+    /* ------- Price Tag & Add to Cart ------------ */
+
+    .price {
+        display: inline-block;
+        padding: 0px 20px 0px 20px;
+    }
+
+    .price > * {
+        display: inline-block;
+    }
+
+    .price > .discount {
+        color: hsl(26, 100%, 55%);
+        background-color: hsl(25, 100%, 94%);
+        border-radius: 5px;
+        margin: 0px 90px 0px 20px;
+        padding: 0px 8px 0px 8px;
+        font-weight: 700;
+        height: 25px;
+    }
+
+    .price > .discount > p {
+        position: relative;
+        bottom: 14px;
+    }
+
+    .price > p {
+        color: hsl(220, 14%, 75%);
+        text-decoration: line-through;
+    }
+
+    .cart {
+        background-color: hsl(223, 64%, 98%);
+        margin: 0px 20px 0px 20px;
+        border-radius: 10px;
+    }
+
+    .cart-plus-minus:hover {
+        opacity: 0.5;
+    }
+
+    .cart > * {
+        display: inline-block;
+        padding: 0px 45px;
+        color: hsl(26, 100%, 55%);
+        font-weight: 700;
+    }
+
+    .amount {
+        color: black;
+    }
+
+    .add-btn {
+        display: inline-block;
+        background-color: hsl(26, 100%, 55%);
+        margin: 5px 20px;
+        width: 330px;
+        height: 40px;
+        border: 0;
+        border-radius: 5px;
+        color: hsl(0, 0%, 100%);
+        font-weight: 700;
+    }
+
+    .add-btn:hover {
+        background-color: hsl(220, 14%, 75%);
+    }
+
+    .btn-svg {
+        height: 15px;
+        padding: 0px 10px;
+    }
+
+    .lb-bg {
+        display: none;
+    }
+}
+
+/*----------------- styling for Desktop -------------------*/
+
+/*----------------- Navbar container -------------------*/
+@media (min-width: 375px) {
+    .navbar {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .navbar p.nav-item {
+        order: -1;
+        font-family: "Kumbh Sans", sans-serif;
+        font-weight: 700;
+        font-size: 30px;
+        padding-left: 150px;
+    }
+
+    .navbar img.nav-item {
+        width: 50px;
+        height: 50px;
+        margin-top: 20px;
+        margin-left: 20px;
+    }
+
+    /* Dropdown button */
+    .dropbtn {
+        display: none;
+    }
+
+    /* Dropdown content (hidden by default) */
+    .dropdown-content {
+        font-family: "Kumbh Sans", sans-serif;
+        font-weight: 400;
+        /* box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); */
+    }
+
+    /* Links inside the dropdown */
+    .dropdown-content a {
+        text-decoration: none;
+        padding-left: 30px;
+        font-family: "Kumbh Sans", sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        position: relative;
+        top: 45px;
+        color: black;
+    }
+
+    .close {
+        display: none;
+    }
+
+    /* Add a grey background color to dropdown links on hover */
+    .dropdown-content a:hover {
+        text-decoration: underline;
+        text-underline-offset: 20px;
+        text-decoration-color: hsl(26, 100%, 55%);
+        text-decoration-thickness: 3px;
+    }
+
+    /* ------ Cart dropdown container ------- */
+
+    .cartSvg {
+        margin-top: 40px;
+        width: 25px;
+        height: 25px;
+        margin-left: 600px;
+    }
+
+    .cart-drop {
+        display: none;
+        position: absolute;
+        right: 100px;
+        top: 100px;
+        z-index: 1;
+        background-color: #ffffff;
+        margin: 10px 5px;
+        width: 365px;
+        height: 270px;
+        border-radius: 10px;
+    }
+
+    .cart-drop > p {
+        margin-left: 10px;
+        font-weight: 700;
+    }
+
+    .cart-drop > hr {
+        border: 1px solid hsl(227, 13%, 86%);
+    }
+
+    .cartSvg:hover {
+        background-color: hsl(240, 12%, 91%);
+        opacity: 0.4;
+    }
+
+    .show-cart {
+        display: block;
+    }
+
+    .cart-items {
+        margin: 0px 10px;
+    }
+
+    .cart-items > * {
+        display: inline-block;
+    }
+
+    .cart-items p {
+        font-size: 14px;
+        margin-top: 0px;
+        padding: 0px 20px;
+    }
+
+    .cart-img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .cart-img > img {
+        border-radius: 10px;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        float: left;
+        margin-top: 40px;
+    }
+
+    .sec-p {
+        margin-left: 70px;
+    }
+
+    .cart-drop button {
+        display: block;
+        background-color: hsl(26, 100%, 55%);
+        margin: 20px 10px 0px;
+        width: 340px;
+        height: 50px;
+        border: 0;
+        border-radius: 5px;
+        color: hsl(0, 0%, 100%);
+        font-weight: 700;
+    }
+
+    .cart-drop button:hover {
+        background-color: hsl(220, 14%, 75%);
+    }
+
+    .del-from-cart {
+        margin-left: 100px;
+    }
+
+    .del-from-cart:hover {
+        opacity: 0.5;
+    }
+
+    .empty-cart {
+        font-weight: 700;
+        color: hsl(219, 9%, 45%);
+        margin: 80px !important;
+    }
+
+    .count {
+        width: 16px;
+        height: 12px;
+        border-radius: 5px;
+        text-align: center;
+        z-index: 1;
+        font-size: 10px;
+        background-color: hsl(26, 100%, 55%);
+        color: #ffffff;
+        margin-top: 40px;
+    }
+
+    /*----------------- Carousel container -------------------*/
+
+    /* Slideshow container */
+
+    .slideshow-container {
+        width: auto;
+        position: relative;
+        float: left;
+        margin: 50px 40px 10px 200px;
+        z-index: 1;
+    }
+
+    .mySlides {
+        width: 380px;
+        height: 400px;
+        display: none;
+    }
+
+    .mySlides > * {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    .show {
+        display: block;
+    }
+
+    .thumbnail-pics {
+        margin: 50px;
+        display: inline-flex;
+        position: absolute;
+        top: 500px;
+        left: 160px;
+    }
+    .thumbnail {
+        width: 70px;
+        height: 70px;
+        margin: 10px;
+    }
+
+    .thumbnail > * {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    .thumbnail > *:hover {
+        border: 2px solid hsl(26, 100%, 55%);
+        opacity: 50%;
+    }
+
+    /*----- Lightbox -----*/
+
+    .lb-bg {
+        display: none;
+        position: absolute;
+        z-index: 3;
+        height: 100vh;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    .lightbox {
+        display: none;
+        width: auto;
+        position: absolute;
+        margin: 10px 0 0 550px;
+        z-index: 3;
+    }
+
+    .lightbox-images {
+        width: auto;
+        position: relative;
+    }
+
+    .lightbox-slides {
+        display: none;
+        width: 450px;
+        height: 500px;
+    }
+
+    .lightbox-slides > * {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    .show-l {
+        display: block;
+    }
+
+    .thumbnail-p {
+        margin: 50px;
+        display: inline-flex;
+        position: absolute;
+        top: 450px;
+    }
+    .thumb-lightbox {
+        width: 70px;
+        height: 70px;
+        margin: 10px;
+    }
+
+    .thumb-lightbox > * {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    .thumb-lightbox > *:hover {
+        border: 2px solid hsl(26, 100%, 55%);
+        opacity: 50%;
+    }
+
+    .next,
+    .previous {
+        display: none;
+    }
+
+    /* prev2 & next2 btn */
+
+    .round {
+        border-radius: 50%;
+    }
+
+    .next2,
+    .previous2 {
+        z-index: 4;
+    }
+
+    .previous2,
+    .next2 {
+        text-decoration: none;
+        display: inline-block;
+        padding: 8px 16px;
+        background-color: #f1f1f1;
+        color: black;
+    }
+
+    .previous2:hover,
+    .next2:hover {
+        background-color: #ddd;
+        color: hsl(26, 100%, 55%);
+        border: 2px solid hsl(26, 100%, 55%);
+    }
+
+    .previous2 {
+        position: absolute;
+        top: 230px;
+        left: -25px;
+    }
+
+    .next2 {
+        position: absolute;
+        top: 230px;
+        left: 440px;
+    }
+
+    .close-lightbox {
+        z-index: 4;
+        position: absolute;
+        width: 15px;
+        top: -20px;
+        right: 0px;
+    }
+
+    .close-lightbox:hover {
+        background-color: hsl(26, 100%, 55%) !important;
+    }
+
+    /* ---------------- Main Part --------------------- */
+
+    .desc {
+        width: 1050px;
+        position: relative;
+        top: 80px;
+        left: 80px;
+        padding: 10px 20px 0px 20px;
+        text-align: left;
+    }
+
+    .company-title {
+        color: hsl(26, 100%, 55%);
+        font-weight: 700;
+        text-align: left;
+    }
+
+    /* ------- Price Tag & Add to Cart ------------ */
+    .price {
+        position: relative;
+        top: 80px;
+        left: 80px;
+        padding: 0px 20px 0px 20px;
+    }
+
+    .price > * {
+        display: inline-block;
+    }
+
+    .price > .discount {
+        color: hsl(26, 100%, 55%);
+        background-color: hsl(25, 100%, 94%);
+        border-radius: 5px;
+        margin: 0px 90px 0px 20px;
+        padding: 0px 8px 0px 8px;
+        font-weight: 700;
+        height: 25px;
+    }
+
+    .price > .discount > p {
+        position: relative;
+        bottom: 14px;
+    }
+
+    .price > p {
+        color: hsl(220, 14%, 75%);
+        text-decoration: line-through;
+    }
+
+    .cart {
+        background-color: hsl(223, 64%, 98%);
+        border-radius: 10px;
+        position: relative;
+        top: 80px;
+        left: 80px;
+        width: 220px;
+        height: 60px;
+        display: inline-flex;
+    }
+
+    .cart-plus-minus:hover {
+        opacity: 0.5;
+    }
+
+    .cart > * {
+        display: inline;
+        padding: 0px 30px;
+        color: hsl(26, 100%, 55%);
+        font-weight: 700;
+    }
+
+    .amount {
+        color: black;
+    }
+
+    .add-btn {
+        display: inline-block;
+        background-color: hsl(26, 100%, 55%);
+        width: 200px;
+        height: 60px;
+        border: 0;
+        border-radius: 5px;
+        color: hsl(0, 0%, 100%);
+        font-weight: 700;
+        position: relative;
+        top: 80px;
+        left: 100px;
+    }
+
+    .add-btn:hover {
+        background-color: hsl(220, 14%, 75%);
+    }
+
+    .btn-svg {
+        height: 15px;
+        padding: 0px 10px;
+    }
+
+    /* Footer */
+    .attribution {
+        position: relative;
+        top: 260px;
+        right: 300px;
+        margin-top: 20px;
+        margin-bottom: 5px;
+        font-size: 11px;
+        text-align: center;
+        font-weight: 700;
+    }
+    .attribution a {
+        color: hsl(228, 45%, 44%);
+    }
+}
